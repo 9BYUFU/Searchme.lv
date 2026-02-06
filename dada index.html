@@ -58,6 +58,21 @@ h2 {
   font-size: 3rem;
   animation: pulse 1.5s infinite;
 }
+.private-btn{
+  margin-top:20px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff4b7d,#ff758c);
+  color:white;
+  font-size:1.1rem;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.4s;
+}
+.private-btn:hover{
+  transform:scale(1.1);
+}
 
 /* Countdown */
 .countdown {
@@ -139,6 +154,15 @@ h2 {
   cursor: pointer;
 }
 
+.message-box{
+  background:rgba(255,255,255,0.15);
+  padding:30px;
+  border-radius:20px;
+  max-width:500px;
+  text-align:center;
+  animation:fadeDown 1s;
+}
+
 /* Footer */
 footer {
   margin: 40px 0;
@@ -175,7 +199,7 @@ footer {
 <body>
 
 <div class="container">
-  <h1>Happy Birthday 🎉</h1>
+  <h1>Happy Birthday Ilay 🎉</h1>
   <h2>To the most beautiful girl ❤️</h2>
 
   <div class="card">
@@ -189,6 +213,10 @@ footer {
       May all your dreams come true and may your life be filled
       with happiness, love, and endless joy 🌸
     </p>
+       <!-- Private Message Button -->
+    <button class="private-btn" onclick="openMessage()">
+      💌 Private Message
+    </button>
 
     <div class="countdown">
       <div class="time-box">
@@ -233,6 +261,26 @@ footer {
   <span id="close">&times;</span>
   <img id="popup-img">
 </div>
+<div class="popup" id="messagePopup">
+  <span onclick="closeMessage()">&times;</span>
+  <div class="message-box">
+    <h2>Sadece Sana ❤️</h2>
+    <p>
+      İyi ki doğdun… 🎂<br><br>
+
+      Seni tanımak bu yılın en güzel sürprizi oldu.<br>
+      Hayatıma girdiğin günden beri bazı şeyler daha güzel,
+      daha anlamlı.<br><br>
+
+      Belki farkında değilsindir ama seninle konuşmak bile
+      insanın gününü güzelleştiriyor.<br><br>
+
+      Kim bilir… belki önümüzdeki yılın en güzel hikâyesi
+      de birlikte yazılır 💖
+    </p>
+  </div>
+</div>
+
 
 <script>
 // 🎂 SET BIRTHDAY DATE
